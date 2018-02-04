@@ -9,7 +9,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
-
+// ======================================
+// const goodsData = require('./../mock/goods.json')
+// =======================================
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -28,10 +30,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
       ],
     },
-    hot: true,
-    contentBase: false, // since we use CopyWebpackPlugin.
-    compress: true,
-    host: HOST || config.dev.host,
+    hot: true,   //热重载
+    contentBase: false, // since we use CopyWebpackPlugin.   //项目目录
+    compress: true,   //是否压缩
+    host: HOST || config.dev.host,      //  指定主机和端口
     port: PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
     overlay: config.dev.errorOverlay
@@ -42,7 +44,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
-    }
+    },
+    // ===========================
+    // before(app){
+    //   app.get('/goods/list',(req,res) => {
+    //     res.json(goodsData)
+    //   })
+    // }
+    // ===========================
   },
   plugins: [
     new webpack.DefinePlugin({

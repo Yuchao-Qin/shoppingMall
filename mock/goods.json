@@ -1,0 +1,24 @@
+{
+  "status":"0",
+  "msg":"",
+  "result":[
+    {
+      "productId":"100001",
+      "productName":"音箱",
+      "productPrice":"199",
+      "productImage":"1.jpg"
+    },
+    {
+      "productId":"100002",
+      "productName":"xxx",
+      "productPrice":"2499",
+      "productImage":"2.jpg"
+    },
+    {
+      "productId":"100003",
+      "productName":"YY",
+      "productPrice":"299",
+      "productImage":"3.jpg"
+    }
+  ]
+}
