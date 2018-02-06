@@ -163,7 +163,6 @@ export default {
               this.busy = false
           }
         });
-
     },
     showFilterPop() {
       this.filterBy = true;
@@ -206,7 +205,6 @@ export default {
     closeModal() {
         this.mdShow = false
     },
-
   }
 };
 </script>

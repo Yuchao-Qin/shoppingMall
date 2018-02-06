@@ -52,7 +52,7 @@
                 </ul>
               </div>
               <div class="login-wrap">
-                <a href="javascript:;" class="btn-login"  @click="login,init" >登  录</a>
+                <a href="javascript:;" class="btn-login"  @click="login" >登  录</a>
               </div>
             </div>
           </div>
