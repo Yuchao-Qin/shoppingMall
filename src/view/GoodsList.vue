@@ -197,6 +197,7 @@ export default {
         }).then((res)=>{
             if(res.data.status==0){
                 this.mdShowCart = !this.mdShowCart
+                this.$store.commit("updateCartCount",1)
             }else{
                 this.mdShow = !this.mdShow
             }

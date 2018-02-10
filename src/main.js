@@ -12,15 +12,36 @@ import './assets/css/base.css'
 import './assets/css/checkout.css'
 import './assets/css/login.css'
 import './assets/css/product.css'
+import Vuex from 'vuex'
 
+Vue.use(Vuex);
 Vue.use(VueLazyload,{
   loading:"./../static/loading-svg/loading-bubbles.svg"
 });
 Vue.filter("currency",currency)
 Vue.use(infiniteScroll)
+
+const store = new Vuex.Store({
+  state:{
+    nickName:'',
+    cartCount:0
+  },
+  mutations: {
+    updateUserInfo(state,nickName) {
+      state.nickName = nickName;
+    },
+    updateCartCount(state,cartCount) {
+      state.cartCount += cartCount;
+    },
+    initCartCount(state,cartCount) {
+      state.cartCount = cartCount
+    }
+  }
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'
