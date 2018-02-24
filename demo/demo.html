@@ -11,7 +11,7 @@
 <body>
   <div id="app">
     <h2>{{count}}</h2>
-    <a href="javascript:;" @click="add">点击</a>
+    <a href="javascript:;">点击</a>
     <counter></counter>
   </div>
 </body>
@@ -19,7 +19,7 @@
   const counter = {
     template:`<div>
       <div>{{count}}</div>
-      <div>{{name}}</div>
+    
     </div>`,
     computed: {
       count() {
@@ -50,16 +50,16 @@
     data:{      
       msg:'vuex的使用'
     },
-    components: {
-      counter
-    },
-    methods: {
-      add() {
-        this.$store.commit("increment")
-        this.$store.commit("updatedName","Mayun")
-      },
+    // components: {
+    //   counter
+    // },
+    // methods: {
+    //   add() {
+    //     this.$store.commit("increment")
+    //     this.$store.commit("updatedName","Mayun")
+    //   },
      
-    },
+    // },
     computed: {
        count() {
         return this.$store.state.count

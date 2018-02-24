@@ -178,7 +178,6 @@
                 cartList:[],
                 modalConfirm:false,
                 delItem:{}
-                
             }
         },
         components: {
@@ -188,7 +187,7 @@
             Modal
         },
         mounted () {
-            this.init()  
+            this.init()
         },
         computed: {
             checkAllFlag() {
@@ -286,9 +285,7 @@
                         path:"/address"
                     });
                 }
-            },
-            
-            
+            }
         }
     }
 </script>

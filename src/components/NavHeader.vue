@@ -9,8 +9,8 @@
         </symbol>
         <div class="navbar">
           <div class="navbar-left-container">
-            <a href="/">
-              <img class="navbar-brand-logo" src="static/logo.png" ></a>
+            <!-- <a href="/">
+              <img class="navbar-brand-logo" src="static/logo.png" ></a> -->
           </div>
           <div class="navbar-right-container" style="display: flex;">
             <div class="navbar-menu-container">
@@ -181,6 +181,7 @@
                    this.loginModalFlag = false;
                 this.$store.commit("updateUserInfo",res.result.userName)
                 this.getCartCount()
+                
                }else{
                    this.errorTip = true
                }
